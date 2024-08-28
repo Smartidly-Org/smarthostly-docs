@@ -2,6 +2,10 @@ backend:
   name: github
   branch: main 
   repo: Smartidly-org/smarthostly-docs
+  auth_scope: repo # Ensure repo scope is set for GitHub authentication
+  base_url: https://smarthostly-docs.vercel.app # Use your Vercel deployed site URL
+  auth_endpoint: api/auth # Auth endpoint for OAuth
+
 
 # These lines should *not* be indented
 media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
