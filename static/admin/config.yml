@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: Smartidly-org/smarthostly-docs # Replace with your GitHub org/repo name
   branch: main # The branch where your docs are stored
   base_url: https://api.netlify.com
