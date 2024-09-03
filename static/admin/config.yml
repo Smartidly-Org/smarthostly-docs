@@ -2,9 +2,8 @@ backend:
   name: github
   repo: Smartidly-org/smarthostly-docs # Replace with your GitHub org/repo name
   branch: main # The branch where your docs are stored
-  base_url: https://api.netlify.com # Netlify's OAuth endpoint
-  auth_endpoint: /api/auth # Endpoint for the authentication function
-  app_id: YOUR_GITHUB_APP_ID # Optional, if using GitHub App instead of OAuth
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 media_folder: "static/img" # Media files will be stored in the repo under static/img
 public_folder: "/img/" # The src attribute for uploaded media will begin with /img
