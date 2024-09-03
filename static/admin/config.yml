@@ -5,6 +5,7 @@ backend:
   auth_scope: repo # Ensure repo scope is set for GitHub authentication
   base_url: https://smarthostly-docs.netlify.app # Your site’s URL
   auth_endpoint: api/auth  # Ensure this is correct for GitHub
+  site_id: 7dcf1653-1185-4247-bac3-dd2b07fcbb14
 
 media_folder: "static/img" # Media files will be stored in the repo under static/img
 public_folder: "/img/" # The src attribute for uploaded media will begin with /img

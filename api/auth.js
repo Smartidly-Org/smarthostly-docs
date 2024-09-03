@@ -1,7 +1,9 @@
 const fetch = require('node-fetch');
+console.log('GITHUB entry1');
 
 exports.handler = async function (event, context) {
     const { code } = event.queryStringParameters;
+    console.log('GITHUB entry2', code);
 
     if (!code) {
         const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&scope=repo`;
@@ -12,6 +14,7 @@ exports.handler = async function (event, context) {
             },
         };
     }
+    console.log('GITHUB entry3');
 
     const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
         method: 'POST',
@@ -27,6 +30,7 @@ exports.handler = async function (event, context) {
     });
 
     const tokenData = await tokenResponse.json();
+    console.log('GITHUB entry4', tokenData);
 
     if (tokenData.error) {
         return {
