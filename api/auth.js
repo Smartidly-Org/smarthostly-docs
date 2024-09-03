@@ -1,37 +1,48 @@
-import fetch from "node-fetch";
+const fetch = require('node-fetch');
 
-export default async function handler(req, res) {
-  const { code } = req.query;
+exports.handler = async function (event, context) {
+    const { code } = event.queryStringParameters;
 
-  if (!code) {
-    const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=Ov23liikQ6h1wViR9G0M&scope=repo`;
-    res.writeHead(302, {
-      Location: githubAuthUrl,
+    if (!code) {
+        const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&scope=repo`;
+        return {
+            statusCode: 302,
+            headers: {
+                Location: githubAuthUrl,
+            },
+        };
+    }
+
+    const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            client_id: process.env.GITHUB_CLIENT_ID,
+            client_secret: process.env.GITHUB_CLIENT_SECRET,
+            code,
+        }),
     });
-    res.end();
-    return;
-  }
 
-  const response = await fetch("https://github.com/login/oauth/access_token", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-    },
-    body: JSON.stringify({
-      client_id: "Ov23liikQ6h1wViR9G0M",
-      client_secret: "538783cf977d73285d5d7e57079802e9e8b52eb8",
-      code: code,
-    }),
-  });
+    const tokenData = await tokenResponse.json();
 
-  const data = await response.json();
+    if (tokenData.error) {
+        return {
+            statusCode: 400,
+            body: JSON.stringify({
+                error: 'Failed to obtain access token',
+                details: tokenData.error_description,
+            }),
+        };
+    }
 
-  if (data.access_token) {
-    return res.status(200).writeHead(302, {
-      Location: `https://smarthostly-docs.vercel.app/admin`,
-      "Set-Cookie": `token=${data.access_token}; Path=/; HttpOnly`,
-    });
-  } else {
-    res.status(500).json({ error: "Failed to obtain access token" });
-  }
-}
+    return {
+        statusCode: 302,
+        headers: {
+            Location: `https://<your-netlify-site>.netlify.app/admin`,
+            'Set-Cookie': `token=${tokenData.access_token}; Path=/; HttpOnly; Secure;`,
+        },
+    };
+};
