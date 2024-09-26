@@ -1,0 +1,5 @@
+[[headers]]
+for = "/admin/config.yml"
+[headers.values]
+  Access-Control-Allow-Origin = "*"
+  Cache-Control = "no-cache"
