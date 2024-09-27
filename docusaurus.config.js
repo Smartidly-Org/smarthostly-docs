@@ -99,6 +99,7 @@ const config = {
             items: [
               {
                 label: 'info@smarthostly.com',
+                href: 'mailto:info@smarthostly.com',
               },
 
             ],
