@@ -4,38 +4,48 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Quick Guide',
+    Svg: require('@site/static/img/undraw_books_re_8gea.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        We know your time is valuable, so we’ve designed this guide to help you get up and running in just 5 minutes.
+
+        <ul style={{ textAlign: 'left', paddingLeft: '20px' }}>
+          <li><strong>Setting Up Your Hub:</strong> Learn how to create and customize your event space.</li>
+          <li><strong>Going Live:</strong> A step-by-step guide to launching your event seamlessly.</li>
+        </ul>
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Comprehensive Hub Management',
+    Svg: require('@site/static/img/undraw_instruction_manual_cyae.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Smarthostly Hub is your command center for managing all aspects of your event, from creating to execution.
+        <ul style={{ textAlign: 'left', paddingLeft: '20px' }}>
+          <li><strong>Centralized Control:</strong> Manage ticketing, attendee engagement, and event settings all in one place.</li>
+          <li><strong>Real-Time Analytics:</strong> Track attendance and engagement metrics live, helping you make informed decisions.</li>
+        </ul>
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Integrated Multi-Platform Experience',
+    Svg: require('@site/static/img/undraw_navigator_a479.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Smarthostly offers a seamless experience across web and mobile platforms. Here’s what you can do:
+        <ul style={{ textAlign: 'left', paddingLeft: '20px' }}>
+          <li><strong>Web Portal:</strong> Access powerful tools and manage your event from your desktop.</li>
+          <li><strong>Mobile App:</strong> Stay connected on the go, with full control over your event from your smartphone.</li>
+        </ul>
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">

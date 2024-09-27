@@ -1,30 +1,39 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
+/* Light Mode */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #4945ff;
+  --ifm-color-primary-dark: #3f3ae6;
+  --ifm-color-primary-darker: #3732cc;
+  --ifm-color-primary-darkest: #2f2aa6;
+  --ifm-color-primary-light: #5b59ff;
+  --ifm-color-primary-lighter: #6d6dff;
+  --ifm-color-primary-lightest: #8585ff;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(73, 69, 255, 0.1);
+  .navbar__brand .navbar__title {
+      color: #4945ff;
+      /* Replace with your desired color */
+    }
+         .hero__title {
+           color: #ffffff;
+           /* Replace with your desired color */
+         }
+             .hero__subtitle  {
+          color: #ffffff;
+          /* Replace with your desired color */
+        }
+  /* Using #4945ff with reduced opacity */
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark Mode */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #a0a0ff;
+  --ifm-color-primary-dark: #8f8fff;
+  --ifm-color-primary-darker: #7e7eff;
+  --ifm-color-primary-darkest: #6d6dff;
+  --ifm-color-primary-light: #b0b0ff;
+  --ifm-color-primary-lighter: #c0c0ff;
+  --ifm-color-primary-lightest: #d0d0ff;
+  --docusaurus-highlighted-code-line-bg: rgba(73, 69, 255, 0.3);
+  /* Using #4945ff with higher opacity */
 }
+
