@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: Smartidly-org/smarthostly-docs  # Replace with your GitHub repo
+  branch: main  # The branch where your docs are stored
+  auth_scope: repo # Ensure repo scope is set for GitHub authentication
+  site_id: 7dcf1653-1185-4247-bac3-dd2b07fcbb14
+
+media_folder: "static/img" # Media files will be stored in the repo under static/img
+public_folder: "/img/" # The src attribute for uploaded media will begin with /img
+
+collections:
+  - name: "docs"
+    label: "Documentation"
+    folder: "docs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
