@@ -112,12 +112,12 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
-  scripts: [
-    {
-      src: 'https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js',
-      async: true,
-    },
-  ],
+  /*   scripts: [
+      {
+        src: 'https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js',
+        async: true,
+      },
+    ], */
 };
 
 export default config;
