@@ -86,14 +86,6 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-              },
-            ],
-          },
-          {
             title: 'Contact',
             items: [
               {
