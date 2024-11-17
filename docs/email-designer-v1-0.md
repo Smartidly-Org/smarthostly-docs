@@ -6,6 +6,7 @@ title: Email Designer v1.0
 #### Overview
 The **Email Designer** is a powerful and user-friendly tool to create, customize, and manage email templates. Designed to cater to event-related communication such as bookings, announcements, and updates, the Email Designer features a drag-and-drop interface, dynamic content integration, and a wide variety of customizable components. This document provides a step-by-step guide to using the tool effectively, referencing specific blocks for each feature.
 
+
 ---
 
 ### Features of the Email Designer
