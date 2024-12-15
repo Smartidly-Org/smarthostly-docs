@@ -1,8 +1,6 @@
 ---
 title: Subscribers List Feature Documentation
 ---
-
-
 ## Overview
 
 The Subscribers List feature allows you to create, manage, and organize subscriber groups for targeted email campaigns. This guide will help you set up and manage subscriber lists effectively.
@@ -58,4 +56,4 @@ The Subscribers List feature allows you to create, manage, and organize subscrib
 * Use segmentation effectively to target specific groups for campaigns.
 * Regularly update your subscriber lists to maintain relevancy.
 
-For more information on linking subscriber lists to email campaigns, refer to the [Email Campaign Documentation](<>).
+For more information on linking subscriber lists to email campaigns, refer to the [Email Campaign Documentation](https://smarthostly-docs.netlify.app/docs/entries/email-campaign-feature-documentation).
