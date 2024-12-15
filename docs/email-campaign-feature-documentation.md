@@ -34,7 +34,7 @@ The Email Campaign feature allows you to create, manage, and send marketing camp
 
 1. Choose the **subscriber list** to whom the email will be sent.
 
-   * Note: Subscriber lists are managed separately. For more information, refer to the [Subscriber List Documentation](<>).
+   * Note: Subscriber lists are managed separately. For more information, refer to the [Subscriber List Documentation](https://smarthostly-docs.netlify.app/docs/entries/subscribers-list-feature-documentation).
 2. Click **Next** to preview the email.
 
 ## Step 5: Review and Send
@@ -51,5 +51,3 @@ The Email Campaign feature allows you to create, manage, and send marketing camp
 * Ensure your email complies with anti-spam best practices.
 * You can revisit and edit drafts anytime under the **Emails** tab in the Marketing section.
 * The preview ensures email formatting is correct across devices.
-
-For managing subscriber lists and detailed email customisation, refer to the separate documentation linked [here](<>).
